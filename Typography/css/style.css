@@ -4,9 +4,18 @@ Typography is the way that text is
 arranged and presented.
 
 */
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 /* import google font from */
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 body {
+    
     padding: 10%;
     font-size: 2rem;
     background-color: papayawhip;
@@ -20,15 +29,17 @@ body {
 button {
     font: inherit;
 } */
-header{
-    color:purple;
+
+header {
+    color: purple;
 }
+
 p {
     text-decoration: none;
     /* text-transform: capitalize;*/
     text-align: justify;
-    text-indent: 2em; 
-    line-height: 1.5 ;
+    text-indent: 2em;
+    line-height: 1.5;
     /* letter-spacing: 0.1em;*/
     /* word-spacing: 0.1em; */
     font-weight: 100;

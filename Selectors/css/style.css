@@ -7,6 +7,7 @@
 
 html {
     font-size: 22px;
+    /* This is kind of to set the standard font size for all elements*/
 }
 
 body {
@@ -20,7 +21,7 @@ main {
 
 h1,
 h2 {
-    color: blue;
+    color: #0000ff;
 }
 
 p {

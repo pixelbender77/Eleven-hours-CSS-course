@@ -1,49 +1,52 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); 
- *{
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
- }
- body{
+}
+
+body {
     font-family: "Roboto", sans-serif;
     min-height: 100vh;
     padding: 20px;
- }
- .container{
+}
+
+.container {
     max-width: 800px;
     min-height: 400px;
     margin-inline: auto;
     border: 1px solid #000;
     display: flex;
-    gap:1rem;
-    justify-content: center; /*left right center space-around space-between space-evenly*/
+    gap: 1rem;
+    justify-content: center;
+    /*left right center space-around space-between space-evenly*/
     align-items: center;
-    /* flex-direction:row;
-    flex-wrap: wrap; */
-    flex-flow: row nowrap;
-    align-content: space-evenly;/*flex-end center flex-start space-between*/
+    /* flex-direction:row;*/
+    flex-wrap: wrap;
+    /* flex-flow: row nowrap; */
+    align-content: space-evenly;
+    /*flex-end center flex-start space-between*/
 }
 
- .box{
+.box {
     /* min-width: 100px; */
     height: 100px;
     background-color: #000;
     color: #fff;
     font-size: 2rem;
     padding: 0.5em;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     flex-basis: 100px;
     /* flex-grow: 1;/*grow to fill out the page*/
     flex-shrink: 2;
     /* flex: 1 1 40%; */
-} 
+}
 
- .box:nth-child(2){
-    flex-grow: 2;/*will get twice as much space as the 100px height assigned after the it is reached*/
+.box:nth-child(2) {
+    flex-grow: 2;
+    /*will get twice as much space as the 100px height assigned after the it is reached*/
     flex: 2 2 250px;
     order: -1;
 }

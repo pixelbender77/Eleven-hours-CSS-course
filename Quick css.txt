@@ -1,0 +1,59 @@
+rem : root element
+ saying 2 rem will imply saying 2 times the size of it's root. the root here is according
+ to html tree hierachy and stuff. for instance header is the root of p. But if 2 rem is given
+ to the p tag without specifying header styling, it will fetch the browser's font size instead
+
+em: element 
+ equivalent to the font size of the direct current element
+
+- % is a better choice for horizontal size setting
+
+- setting body size to full screen and not just content min-height: 100vh.
+
+- box-sizing: border box really helps calculate exactly the size we're assigning 
+  to elements: as it includes border, padding and content (not margin) into the assigned
+  width or height. on the other border-content will set only the content of elements 
+  to the assigned size (excluding padding and border)
+
+- TOP RIGHT BOTTOM LEFT
+- Inherit; is very usefull as it makes child elements have parent properties. normally
+  children do not have direct access to parent properties until parents give them access to 
+  it
+- We can't apply margin to inline elements but to block elements rather
+- Inline-block is a hybrid as it makes the styled element remain inline(not going to a new line)
+  and padding and margin can be applied to it normally. Used for buttons and clickables very often
+- display: none can be used to logically remove an element from rendering
+- a nice place to use px instead of rem is when defining border radius
+
+
+- All elements default to static
+- setting an element's position to relative makes it an ancestor for indented elements
+- sticky block sticks to a container or any defined element
+- fixed is fixed, absolute 
+- html{scroll-behavior: smooth} hahah
+
+- align-content defines the distance between lines(rows) while align-item define how
+  the items as a whole are aligned within a container. align-content therefore has no
+  effect when there's only one line.
+
+
+ [ CSS Grid ]
+
+- display: grid
+- check where to and where not to put commas ','  !!
+- fraction units used specifically for css grid. 'fr'
+- Do not! comment with ' // ' in css. never! comment with /* */ instead. okay?
+- align-content aligns grid items vertically
+- justify-content aligns grid items horizontally
+
+
+
+
+
+
+
+
+
+
+
+Claude

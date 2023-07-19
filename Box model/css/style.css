@@ -1,3 +1,5 @@
+/*This box model stuff is the very base of all css elements*/
+
 * {
     /* reseting browser styles*/
     padding: 0;

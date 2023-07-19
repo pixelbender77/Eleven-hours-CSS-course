@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 body {
     padding: 10%;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-family: 'Roboto',sans-serif;
 }
 a{
-    text-decoration: none;
+    text-decoration: none; /* the default is underlined, so we remove it*/
     cursor:pointer;
     color:blue;
 }

@@ -1,0 +1,24 @@
+rem : root element
+ saying 2 rem will imply saying 2 times the size of it's root. the root here is according
+ to html tree hierachy and stuff. for instance header is the root of p. But if 2 rem is given
+ to the p tag without specifying header styling, it will fetch the browser's font size instead
+
+em: element 
+ equivalent to the font size of the direct current element
+
+- % is a better choice for horizontal size setting
+
+- setting body size to full screen and not just content min-height: 100vh.
+
+- box-sizing: border box really helps calculate exactly the size we're assigning 
+  to elements: as it includes border, padding and content (not margin) into the assigned
+  width or height. on the other border-content will set only the content of elements 
+  to the assigned size (excluding padding and border)
+
+- TOP RIGHT BOTTOM LEFT
+- Inherit; is very usefull as it makes child elements have parent properties. normally
+  children do not have direct access to parent properties until parents give them access to 
+  it
+
+
+Claude

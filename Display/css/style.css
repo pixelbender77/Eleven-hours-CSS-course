@@ -1,17 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     font-size: 2rem;
     font-family: "Roboto", sans-serif;
 }
 
-
-ul{
-    list-style-type: none;/* removing the ul element dots*/
+ul {
+    list-style-type: none;
+    /* removing the ul element dots*/
     padding-left: 0;
     text-align: right;
     background-color: black;
@@ -19,34 +20,34 @@ ul{
     padding: 1.5rem;
     /* display: none; */
 }
-li{
+
+li {
     display: inline-block;
     margin-inline: 0.8rem;
-    /* padding : 2rem ; *//* my method for spacing the nav bar elements */
-    /* background-color: blue; *//* used to debug*/
+    /* padding : 2rem ; */
+    /* my method for spacing the nav bar elements */
+    /* background-color: blue; */
+    /* used to debug*/
 }
 
-li a, li a:visited{
-    text-decoration: none;/*removing default text decoration for links*/
+li a,
+li a:visited {
+    text-decoration: none;
+    /*removing default text decoration for links*/
     color: #fff
 }
-li a:hover{
+
+li a:hover {
     color: #58A6E5;
     /* text-decoration: underline; */
 }
-
-
-
-
-
-
-
 
 
 /* main{
     background-color: aqua;
     width: 50%;
 } */
+
 
 /* p{
     background-color:lightgray;
