@@ -42,11 +42,19 @@ em: element
 - display: grid
 - check where to and where not to put commas ','  !!
 - fraction units used specifically for css grid. 'fr'
-- Do not! comment with ' // ' in css. never! comment with /* */ instead. okay?
+- Do not! comment with ' // ' in css. never! comment with /* */ instead. okay? Good!
 - align-content aligns grid items vertically
 - justify-content aligns grid items horizontally
 
+- Mmm learned about aside elements used for things like side bars, ads, related posts/links , 
+  promotional content and that kind of stuff
 
+- grid auto rows specifies the height of rows in a grid
+
+-grid column start and end are used to define were columns grid elements start and end
+- you could also set thier values to negative 
+- grid-column and grid-row could be used as shortcuts . (instead of grid-row-start 1 grid-row-end 2 --> grid-row: 1/2)
+- grid-auto-rows: minmax(150px, auto). row will have minimum height of 150px and will Grow with the content
 
 
 

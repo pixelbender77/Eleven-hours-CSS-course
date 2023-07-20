@@ -8,13 +8,41 @@
 body{
     font-family: "Roboto",sans-serif;
     min-height: 100vh;
+    display: grid; /* here we're changing the whole layout of the body*/
+    grid-template-columns: repeat(9, 1fr); /*that's 9 columns each occupying 1 fraction*/
+    grid-auto-rows: 50px auto 75px;/* 50px: header, auto: sidebar, 50px: footer. Element height definition*/
+    grid-template-areas: 
+        "hd hd hd hd hd hd hd hd hd"
+        "mn mn mn mn mn mn mn mn sb"
+        "ft ft ft ft ft ft ft ft ft";
+    column-rule-width: 1rem;/*adding 1rem gap between column elements*/
+    column-gap: 0.5rem;
+}
+.el{
+    background-color: rebeccapurple;
+    color: white;
+    display:grid;
+    place-content: center;
+}
+.header{
+    grid-area: hd;
+}
+.sidebar{
+    grid-area: sb;
+    background-color: blue;
+    display: fixed;
+}
+.footer{
+    grid-area: ft;
 }
 
+
 .container{
+    grid-area: mn;
     min-height: 400px;
     display: grid;
     grid-template-columns: repeat(2, 1fr 2fr); /* four columns each having 1fraction size*/
-    grid-auto-rows: minmax(150px, auto) ;
+    grid-auto-rows: minmax(100px, auto) ;
     gap: 1rem;
 
 }
@@ -28,14 +56,25 @@ body{
     grid-column: 1/4; /* starts at column 1 and ends at column(vertical line)4*/
     grid-row: 1/3; /* starts at row 1 and ends at row( horizontal line) 3*/
     display: grid;
-    align-content: center; /*aligning the content*/
-    justify-content: center;
+    /*align-content: center;*/ /*aligning the content*/
+    /*justify-content: center;*/
+    place-content: center; /* can define both values here but also can provide one for both lik i did*/
+   
 }
 
 .box:nth-child(2){
     background-color: purple;
     grid-column: 1/5;
     grid-row: 3/4;
+}
+
+
+
+.box{
+    background-color: black;
+    color: white;
+    font-size: 2rem;
+    padding: 0.5rem;
 }
 
 // .container{ /*Gave me headache!*/
@@ -49,11 +88,4 @@ body{
 //     gap: 1rem;
 
 // }
-
-.box{
-    background-color: black;
-    color: white;
-    font-size: 2rem;
-    padding: 0.5rem;
-}
 
