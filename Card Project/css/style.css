@@ -105,31 +105,38 @@
         }
 
 
-
-
         /*-- MEDIA QUERIES --*/
         /*mediaTag mediaType and (conditionName(min-width, landscape, min-aspect-ration etc):value)*/
         
         @media screen and (min-width:576px) {
             /*SMALL <= 576( mobile phones)*/
-            body {
-                background-color: green;
-                background-image: radial-gradient(whitesmoke, green);
+            main{
+                justify-content: center;
+                flex-flow: row wrap;
+                padding: 1rem;
             }
-            nav {
-                display: none;
+            .card{
+                width: min(100%,400px);
             }
         }
         /*MEDUM*/
         
         @media screen and (min-width:768px) {
             /*for devices having width <= 576( mobile phones)*/
-            body {
-                background-color: gold;
-                background-image: radial-gradient(whitesmoke, gold);
-            }
-            nav {
+            nav{
                 display: none;
+            }
+            .card{
+                /*(how much will element grow with parent, what's it's limit)*/
+                width: min(100%, 325px);/*minimum size i*/
+            
+            /*It means that the card grows and shrinks totally with it's parent but will not go below 325px!! ;-)*/
+        }
+            .card figure{
+                flex-flow: column-reverse;/*just for fancy dave gray!*/
+            }
+            .card p{
+                margin-top: 1rem;
             }
         }
         /*LARGE*/
