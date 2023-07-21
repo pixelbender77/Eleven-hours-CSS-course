@@ -1,0 +1,115 @@
+    @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    /* -- GENERAL STYLES -- */
+    
+    body {
+        font: 1.5rem "Nunito", sans-serif;
+        min-height: 100vh;
+        background-color: #475569;
+        background-image: radial-gradient(whitesmoke, #475569);
+        display: flex;
+        flex-direction: column;
+        /*Setting the display type of the body as flex and giving it a vertical(column) horientation instead of horizontal as it is by default for flexbox*/
+    }
+    
+    header,
+    nav,
+    main,
+    footer {
+        display: grid;
+        place-content: center;
+        /*aligning horizontally the content at the center*/
+        grid-template-columns: 100%;
+        text-align: center;
+    }
+    
+    header,
+    footer {
+        position: sticky;
+        background-color: #1e293b;
+        color: whitesmoke;
+    }
+    
+    header {
+        top: 0;
+    }
+    
+    nav {
+        background-color: #fff;
+        color: #000;
+        padding: 0.5rem;
+        border-bottom: 2px solid #000;
+    }
+    
+    main {
+        flex-grow: 1;
+    }
+    
+    footer {
+        bottom: 0;
+    }
+    /*-- MEDIA QUERIES --*/
+    /*mediaTag mediaType and (conditionName(min-width, landscape, min-aspect-ration etc):value)*/
+    
+    @media screen and (min-width:576px) {
+        /*SMALL <= 576( mobile phones)*/
+        body {
+            background-color: green;
+            background-image: radial-gradient(whitesmoke, green);
+        }
+        nav {
+            display: none;
+        }
+        /*MEDUM*/
+        @media screen and (min-width:768px) {
+            /*for devices having width <= 576( mobile phones)*/
+            body {
+                background-color: gold;
+                background-image: radial-gradient(whitesmoke, gold);
+            }
+            nav {
+                display: none;
+            }
+        }
+        /*LARGE*/
+        @media screen and (min-width:992px) {
+            /*for devices having width <= 576( mobile phones)*/
+            body {
+                background-color: firebrick;
+                background-image: radial-gradient(whitesmoke, firebrick);
+            }
+            nav {
+                display: none;
+            }
+        }
+        /*XL*/
+        @media screen and (min-width:1200px) {
+            /*( Extra large screens) having a minimum of 1200px screen size wide*/
+            body {
+                background-color: rebeccapurple;
+                background-image: radial-gradient(whitesmoke, rebeccapurple);
+            }
+            nav {
+                display: none;
+            }
+        }
+        /*MOBILE DEVICE LANDSCAPE*/
+        /*for devices having width <= 576( mobile phones)*/
+        @media screen and (max-height:425px) and ( min-aspect-ratio: 7/4) {
+            body {
+                background-color: dodgerblue;
+                background-image: radial-gradient(whitesmoke, dodgerblue);
+            }
+            h1,
+            h2 {
+                font-size: 1.5rem;
+            }
+            nav {
+                display: none;
+            }
+        }
+    }

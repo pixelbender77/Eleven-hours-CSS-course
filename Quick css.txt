@@ -25,6 +25,7 @@ em: element
 - display: none can be used to logically remove an element from rendering
 - a nice place to use px instead of rem is when defining border radius
 
+ [ Flex-box ]
 
 - All elements default to static
 - setting an element's position to relative makes it an ancestor for indented elements
@@ -35,6 +36,9 @@ em: element
 - align-content defines the distance between lines(rows) while align-item define how
   the items as a whole are aligned within a container. align-content therefore has no
   effect when there's only one line.
+- setting the display type of an element to flex indeed is making it look kind of like normal
+  elements in flutter. space-around, space-between, mainAxisAlignment(flex-direction) and stuff
+
 
 
  [ CSS Grid ]
@@ -55,6 +59,29 @@ em: element
 - you could also set thier values to negative 
 - grid-column and grid-row could be used as shortcuts . (instead of grid-row-start 1 grid-row-end 2 --> grid-row: 1/2)
 - grid-auto-rows: minmax(150px, auto). row will have minimum height of 150px and will Grow with the content
+
+
+[CSS Images]
+
+- images are inline elements
+- can make them block elements by changing thier display property to block. It also removes
+  space under the image. ( Inline elements have space underneath by default.)
+
+- always use an image that is twice as big as where you're planning to display
+
+
+[Media Queries]
+- Mobile first designs. It's easier to design mobile or small version first and then expand
+  it to the size we want
+- md file -> Markdown file
+- iPhone 5/SE one of the smallest mobile devices.. mmm
+- Shift+Alt+downArrow : past down
+- Selection and Ctrl+D to select following item for edit in VS Code
+- Wow one of the funniest mess. Do not indent media queries!!! one at a time and close it's 
+  bracket. wow.
+- scroll-margin top not Scroll-padding-top. Make sure you do not use the word padding instead
+  margin and vice versa. 😭😭
+
 
 
 
