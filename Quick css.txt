@@ -82,10 +82,27 @@ em: element
 - scroll-margin top not Scroll-padding-top. Make sure you do not use the word padding instead
   margin and vice versa. 😭😭
 
+- haven't suffered from this one yet but notice .element =! element in styling.
+- It's like it's preferable to have the small media query element at the end of the file.. just check
+- Cascading Style Sheets. Never forget! the last is always gonna be prefered. With Specificity! :-)
+- You can factorise out elements using the :is().
 
+  [ Pseudo Classes ] 
+ -> classes
+- a:any-link{} selects both the link and the visited pseudo class
+- could use :is to list element to be selected.. but it's week
 
+- Another dangerous pseudo class is the :where pseudo class. It has specificity of (0,0,0). wtf
+- :target to style the last target element. (last selected, clicked, this kind of stuff)
 
+- :nth-child() selector takes it's reference from the order in the html file and not the
+  css file. it means that if you reordered the elements with css you'll have to refer back
+  to the order in the html file to selected the element	
 
+- you could say child or OBJECT. hahaha so reading this .card:nth-child(1) it'll give
+  the first object or instance of the .card class. hahaha
+ -> elements
+- 
 
 
 
