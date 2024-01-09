@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+/* || RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* VARIABLES */
+
+:root {
+    /* FONT */
+    --FF: "Nunito", sans-serif;
+    /* font family*/
+    --FS: 1.5rem;
+    /* font size */
+    --FS-XL: 3rem;
+
+    /* Colors */
+    --BGCOLOR: #475569;
+    --ALT-BGCOLOR: #1e293b;
+    --RADIAL-COLOR: whitesmoke;
+    --LIGHT-COLOR: whitesmoke;
+    --DARK-COLOR: #000;
+    --LINK-HOVER: rgb(43, 187, 212);
+
+    /* SQUARE*/
+    --SQUARE-BGCOLOR: papayawhip;
+    --SQUARE-SIZE: max(150px, 20vw);
+
+
+    /*  GENERAL*/
+    --PADDING: 0.5rem;
+    --SHADOWS: 0 6px 5px -5px var(--DARK-COLOR);
+    --BORDERS: 2px solid var(--DARK-COLOR);
+}
+
+@media (prefers-color-scheme: dark) { /*setting DARK MODE colors( this method checks user's preferred theme(light or dark) in settings and this will apply if mode is dark*/
+    :root {
+      --BGCOLOR: #000;
+      --ALT-BGCOLOR: #333;
+      --RADIAL-COLOR: rgb(217, 217, 217);
+      --SQUARE-BGCOLOR: rgb(202, 174, 202);
+    }
+  }
+
+
+
+/* || GENERAL STYLES */
+
+body {
+    font: 1.5rem "Nunito", sans-serif;
+    min-height: 100vh;
+    background-color: #475569;
+    background-image: radial-gradient(whitesmoke, #475569);
+    display: flex;
+    flex-direction: column;
+}
+
+header,
+nav,
+footer {
+    display: grid;
+    place-content: center;
+    grid-template-columns: 100%;
+    text-align: center;
+}
+
+header,
+footer {
+    position: sticky;
+    background-color: #1E293B;
+    color: whitesmoke;
+}
+
+header {
+    top: 0;
+}
+
+nav {
+    background-color: #fff;
+    color: #000;
+    padding: 0.5rem;
+    border-bottom: 2px solid #000;
+}
+
+main {
+    flex-grow: 1;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: row wrap;
+    gap: min(4vw, 15px);
+}
+
+footer {
+    bottom: 0;
+}
+
+
+/*|| FEATURES*/
+
+.square--highlight{ /*overwriting the square background color for that particular square*/
+    --SQUARE-BGCOLOR: cornflowerblue;
+}
+
+
+
+
+.square{
+    background-color: var(--SQUARE-BGCOLOR);
+    width: var(--SQUARE-SIZE);
+    height: var(--SQUARE-SIZE);
+    border: var(--BORDERS);
+    border-radius: 15px;
+    display: grid;
+    place-content: center;
+    font-size: var(--FS-XL);
+    box-shadow: var(--SHADOWS);
+}
+

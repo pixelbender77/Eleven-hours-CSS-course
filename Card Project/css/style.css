@@ -1,10 +1,33 @@
         @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+        /*BROWSER RESET*/
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+        /* VARIABLES */
+        :root{
+        /* FONT */
+            --FF: "Nunito", sans-serif;/* font family*/
+            --FS: 1.5rem; /* font size */
+            --FS-XL: 3rem; /* font size extra-large */
+            
+        /* Colors */
+            --BGCOLOR: #475569;
+            --ALT-BGCOLOR: #1e293b;
+            --RADIAL-COLOR: whitesmoke;
+            --LIGHT-COLOR: whitesmoke;
+            --DARK-COLOR: #000;
+            --LINK-HOVER: rgb(43, 187, 212);
+
+        /*  Padding*/
+            --PADDING: 0.5rem;
+            --SHADOWS: 0 6px 5px -5px var(--DARK-COLOR);
+            --BORDERS: border-bottom: 2px solid var(--DARK-COLOR);
+        }
+
         
+
         img {
             /*changing image to block element and making image fit screen*/
             display: block;
@@ -19,24 +42,34 @@
         /* -- GENERAL STYLES -- */
         
         body {
-            font: 1.5rem "Nunito", sans-serif;
+            font: var(--FS) var(--FF);
             min-height: 100vh;
-            background-color: #475569;
-            background-image: radial-gradient(whitesmoke, #475569);
+            background-color: var(--BGCOLOR);
+            background-image: radial-gradient(var(--RADIAL-COLOR), var(--BGCOLOR));
             display: flex;
             flex-direction: column;
             /*Setting the display type of the body as flex and giving it a vertical(column) horientation instead of horizontal as it is by default for flexbox*/
         }
+
         html{
             scroll-behavior: smooth;
+        }
+        header,
+        nav,
+        main, footer{
+            display: grid;
+            place-content: center;
+            grid-template-columns: 100%;
+            text-align: center;
         }
         
         header,
         footer {
             position: sticky;
-            background-color: #1e293b;
-            color: whitesmoke;
+            background-color: var(--ALT-BGCOLOR);
+            color: var(--LIGHT-COLOR);
             text-align: center;
+            z-index: 1;
         }
         
         header {
@@ -45,18 +78,20 @@
         
         nav {
             background-color: #fff;
-            padding: 0.5rem;
-            border-bottom: 2px solid #000;
+            padding: var(--PADDING);
+            border-bottom: var(--BORDERS);
             font-weight: bolder;
             display: flex;
             justify-content: space-evenly;
+            box-shadow: var(--SHADOWS);
         }
         
         nav a:any-link {
-            color: #000;
+            color: var(--DARK-COLOR);
+            text-decoration: none;
         }
         nav :is(a:hover, a:focus){
-            color: hsla(0,0%,20%,0.6);
+            color: var(--LINK-HOVER)
         }
 
 
@@ -77,7 +112,7 @@
         
         }
         .footer-el{
-            color: whitesmoke;
+            color: var(--LIGHT-COLOR);
             text-decoration: none;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-weight: lighter;
@@ -123,7 +158,7 @@
             flex-flow: column nowrap;
         }
         .card img{
-            border: 8px solid #1E293B;
+            border: 8px solid var(--ALT-BGCOLOR);
             border-radius: 50%;
         }
         .card img:not([alt]){ /* mmm selection all card images that do not have alt attributes*/
@@ -141,22 +176,22 @@
             display: block; /*you can also choose the display method mm*/
         }
 
-        .card p {
-            position: relative;
+        .card p { /*making the card paragraph a parent of the quotes*/
+            position: relative; 
         }
         .card p::before{
-            content: open-quote;
-            font-size: 3em;
-            position: absolute;
-            top:-0.25em;
-            left: -0.5em;
+            content:open-quote;
+            font-size: 3rem;
+            position: absolute; /*quotes will align relative to the card paragraph*/
+            top: -0.25em;
+            left:  6rem;
         }
         .card p::after{
-            content: close-quote;
-            font-size: 3em;
+            content:close-quote;
+            font-size: 3rem;
             position: absolute;
-            top:-0.25em;
-            right: -0.5em;
+            top: -0.25em;
+            right:  6rem;
         }
 
 
@@ -164,7 +199,18 @@
         /*-- MEDIA QUERIES --*/
         /*mediaTag mediaType and (conditionName(min-width, landscape, min-aspect-ration etc):value)*/   
         
-        
+
+        @media screen and (min-width:100px) {
+            /*Miniscule phones 🤔*/
+            .card p::after{     /*making the quotes responsive*/            
+                right: 3rem;
+            }
+            .card p::before{                
+                left: 3rem;
+            }
+        }
+
+
         @media screen and (min-width:576px) {
             /*SMALL <= 576( mobile phones)*/
             main{
@@ -181,6 +227,7 @@
             .footer-el-container{
                 flex-flow: column;
             }
+            
         }
 
         /*MEDUM iPad*/
@@ -207,11 +254,17 @@
             .footer-el-container{
                 flex-flow: row;
             }
+            .card p::after{     /*making the quotes responsive*/            
+                right: 4rem;
+            }
+            .card p::before{                
+                left: 3.5rem;
+            }
         }
         /*LARGE (PC)*/
         
         @media screen and (min-width:992px) {
-            /*for devices having width <= 576( mobile phones)*/
+            /*for devices having width <= 992( Tablets )*/
             .card{
                 width: min(100%, 400px);
             }
@@ -221,6 +274,7 @@
             .footer-el-container{
                 flex-flow: row;
             }
+            
         }
 
         /*XL- Really Large screens*/
@@ -232,6 +286,7 @@
             .footer-el-container{
                 flex-flow: row;
             }
+            
         }
 
         /*MOBILE DEVICE LANDSCAPE*/
@@ -258,6 +313,10 @@
             }
             .footer-el-container{
                 flex-flow: row;
+
+            }
+            .footer-el{
+                font-size: 3rem;
             }
             
         }

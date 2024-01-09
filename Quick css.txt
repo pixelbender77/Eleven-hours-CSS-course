@@ -38,7 +38,8 @@ em: element
   effect when there's only one line.
 - setting the display type of an element to flex indeed is making it look kind of like normal
   elements in flutter. space-around, space-between, mainAxisAlignment(flex-direction) and stuff
-
+- Flex flow column means that the elements in the flex box will align in a column.
+- flex flow row means that the elements will align in a row
 
 
  [ CSS Grid ]
@@ -89,7 +90,7 @@ em: element
 
   [ Pseudo Classes ] 
  -> classes
-- a:any-link{} selects both the link and the visited pseudo class
+- a:any-link() selects both the link and the visited pseudo class
 - could use :is to list element to be selected.. but it's week
 
 - Another dangerous pseudo class is the :where pseudo class. It has specificity of (0,0,0). wtf
@@ -102,10 +103,132 @@ em: element
 - you could say child or OBJECT. hahaha so reading this .card:nth-child(1) it'll give
   the first object or instance of the .card class. hahaha
  -> elements
-- 
+
+
+  [ Functions ]
+
+- while using the min function always put on one side an absolute value and on the other
+  side a value that will change with the size of the page. If you put two absolute values
+  (which are constants) css will always select that smallest one.. and so no need even using
+  the min() function. 
+  min ([limit(absolute Qty)], [varying(relative Qty)].
+  It is better to choose vh for fonts that vw.
+
+  - min and max difference -
+  With the min function, the first value(absolute) is the Maximum it'll ever get.
+  With the max function, the first value(absolute) is the Minimum it'll ever get.
+
+  In other words, the first parameter of each function defines the opposite of it's
+  function name.
+
+- The Clamp function closes the debate. 
+  clamp ( min(absolute) , ideal(relative), max(absolute) );
+
+- Actually you could play around with functions.. for hover focus and stuff, set the
+  filter property to brightness, hue-rotate, blur.. etc
+
+
+  [ Animations ]
+
+- Animations are the coolest things in CSS haha.
+- animation-delay: 1s; <--Is Correct but 1 s; <-- In NOT correct
+- for element display like text and stuff.. better choose ease-out as animation timing function
+- At times we set the display property of elements just because we wanna easisly position some element in them. Yeah that's what it's all about
+
+- Dude!! .nav != nav  Be  { Carefull!!! }
+
+ 
+  [ Organisation ]
+
+- Comment style headers. Use comments on headings
+- Sort properties alphabetically
+- Follow naming convention. This is one
+
+  BEM convention: Block Element Modifier
+
+  = Block: It could be a button, and image, a side bar etc..  An entity or anything that kind of stands on it's own
+    (.navbar , .sidebar)
+
+  = Modifier: It is an increment of a block , as the name says.. "Modifier". It actually modifies blocks.
+    (.btn--primary , image--blurred, btn--lean). Notice the double hyphens between the words4
+
+  = Element: As the name says, this kind of entities are 'part-of' , 'belong-to' 'are unique-to' . Making an entity element implies
+    that it it's type is unique to it's parent. e.g (.navbar__link, .profile__caption) . In the
+    first example it means that the style applied to that link is just for navbar links. samething for the second example,
+    the caption is just for profiles
+    The syntans is  .[block]__[element] . 
+    On the other hand something like ".header__navbar__link " is not correct. You just need to call the block and not first calling
+    all the elements under which the current element is nested. (never for underscores in a name🤔)
+    In order words it doesn't represent structure!
+
+- Also note that despite all the above, selecting an element like this : ".header button"(two classes) will definitely  have more specificity than selecting it like this: ".header__button" (just a class name). So yeah take note.
+
+- Almost there and now the computer is disturbing 😒
+
+
+   [ FINAL PROJECT ]
+
+- Ctrl space bar to call emmet abbreviation
+- The meta tag <meta http-equiv="X-UA-Compatible" content="IE-edge"> Is deprecated!
+  Unless you want your webpage to be supported by internet explorer which has been discontinued.
+
+- On the other hand <meta name="viewport" content="width=device-width, initial-scale=1.0"> is a must
+  use if you want to make your website responsive.
+
+- The section after the header , generally with image, video or slider is called HERO section.
+- Mmm looks like em is used for smaller stuff and rem for bigger
+- Use focus-visible instead of just focus.  
+  The difference is that with focus, control may remain on the selected element meanwhile
+  with focus-visible after it's used it'll change
+
+- Missing a semi colon after a style property cancels it lol. pff
+
+- Dude the seconds stuff when you are dealing with animations!!! don't forget
+ 😫😫🙏🏽
+- Also, the BEM convention also says the order in which you should place your styles.
+  ie for say your navbar you'll place the .nav, then the .nav__elements and finally the .nav__elements--[modifierProps]
+
+- Wanna know or see if you can use an element or know the number of browser that support it, go to caniuse.com
+- You could convert table to grid by setting it's display property to contents like here: "display: contents".
+
+-
+
+ 
+
+     = Building the website = 
+
+-  Omitting the media type can be usefull when you really want to
+   apply styles accross all devices.
+- overflow: hidden to hide overflows
+
+- At times the browser's inspect property alters styling. so when possible resize the browser window instead
+- Ha could you imagine a :hover is wrong?😒 stupid css. instead a:hover is correct. anyways lets move forward
+- mmm CSS Scan, interesting 
+- align-self overrides the parent alignment. Very usefull property
+
+- full page display doesn't function when you enter inspection mode directly in a device.
+- Its just better at times to use the transform: scale() to resize during responsiveness than
+  using values
+
+- Did you know that missing a semicolon before a styling line cancels that line?
+- font-family: Arial Rounded MT, Helvetica, sans-serif;
+- Next time you copy page to fill another one, make sure you bring everything along. (CSS, JS etc..)
+
+- You CAN NOT! manipulate svg colors with fill: and stroke: 
+  instead
+
+- Justify-content is like 'main-axis alignment' and align-item is like 'cross-axis alignment'
+
+- Don't forget to always add the defer attribute to the script tag while injecting your html
+
+- Background intelligent transfer disable
 
 
 
 
 
+
+
+Lyne - Jimmy
 Claude
+Kissly
